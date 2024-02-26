@@ -1,0 +1,11 @@
+C:\Users\gabriel.garcia\source\repos\Suporte_TI_Garcia\Suporte_TI_Garcia.Shared\bin\Debug\net8.0\Suporte_TI_Garcia.Shared.deps.json
+C:\Users\gabriel.garcia\source\repos\Suporte_TI_Garcia\Suporte_TI_Garcia.Shared\bin\Debug\net8.0\Suporte_TI_Garcia.Shared.dll
+C:\Users\gabriel.garcia\source\repos\Suporte_TI_Garcia\Suporte_TI_Garcia.Shared\bin\Debug\net8.0\Suporte_TI_Garcia.Shared.pdb
+C:\Users\gabriel.garcia\source\repos\Suporte_TI_Garcia\Suporte_TI_Garcia.Shared\obj\Debug\net8.0\Suporte_TI_Garcia.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gabriel.garcia\source\repos\Suporte_TI_Garcia\Suporte_TI_Garcia.Shared\obj\Debug\net8.0\Suporte_TI_Garcia.Shared.AssemblyInfoInputs.cache
+C:\Users\gabriel.garcia\source\repos\Suporte_TI_Garcia\Suporte_TI_Garcia.Shared\obj\Debug\net8.0\Suporte_TI_Garcia.Shared.AssemblyInfo.cs
+C:\Users\gabriel.garcia\source\repos\Suporte_TI_Garcia\Suporte_TI_Garcia.Shared\obj\Debug\net8.0\Suporte_TI_Garcia.Shared.csproj.CoreCompileInputs.cache
+C:\Users\gabriel.garcia\source\repos\Suporte_TI_Garcia\Suporte_TI_Garcia.Shared\obj\Debug\net8.0\Suporte_TI_Garcia.Shared.dll
+C:\Users\gabriel.garcia\source\repos\Suporte_TI_Garcia\Suporte_TI_Garcia.Shared\obj\Debug\net8.0\refint\Suporte_TI_Garcia.Shared.dll
+C:\Users\gabriel.garcia\source\repos\Suporte_TI_Garcia\Suporte_TI_Garcia.Shared\obj\Debug\net8.0\Suporte_TI_Garcia.Shared.pdb
+C:\Users\gabriel.garcia\source\repos\Suporte_TI_Garcia\Suporte_TI_Garcia.Shared\obj\Debug\net8.0\ref\Suporte_TI_Garcia.Shared.dll
