@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Suporte_TI_Garcia.props" />
+</Project>

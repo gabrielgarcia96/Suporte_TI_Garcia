@@ -1,0 +1,81 @@
+﻿@page "/arquitetura"
+
+@using Microsoft.AspNetCore.Components.Routing
+@using Suporte_TI_Garcia.Shared.Models
+@inject NavigationManager Navigation
+
+<PageTitle>Arquitetura</PageTitle>
+
+<link rel="stylesheet" href="/Arquitetura.css" />
+
+
+
+<form @onsubmit="AdicionarObejto">
+    <label>Empresa: </label>
+    <select @bind="arquitetura.Empresa" name="empresa">
+        <option>...</option>
+        <option>Bem Serviços</option>
+        <option>Emprestae</option>
+        <option>Sou Assessoria</option>
+        <option>Rafael Menezes</option>
+    </select>
+    <label>Nome equipe:</label>
+    <select @bind="arquitetura.Equipe" name="equipe">
+        <option>Elite-Credito</option>
+        <option>Apobem-Seguro</option>
+        <option>Sabemi-Seguro</option>
+        <option>Mbm-Seguro</option>
+        <option>Ouvidoria e Cobrança</option>
+        <option>Auditoria</option>
+    </select>
+    <label>Maquina:</label>
+    <input @bind="arquitetura.NomeMaquina" placeholder="Digite o nome da maquina" />
+    <label>Posição de Atendimento:</label>
+    <input @bind="arquitetura.PosicaoPa" placeholder="Digite o número da Ponto de acesso(PA)" />
+
+    <button type="submit" class="btn btn-success">Adicionar</button>
+    <br />
+
+    
+    <button @onclick="NavegarParaBemServicos" class=" btn btn-dark botao-margin">Bem Serviços</button>
+    <button class="btn btn-dark botao-margin">Emprestae</button>
+    <button class="btn btn-dark botao-margin">Sou Assessoria</button>
+    <button class="btn btn-dark botao-margin">Rafael Menezes</button>
+   
+</form>
+
+@code {
+    Arquitetura arquitetura = new();
+    List<Arquitetura> arquiteturaList = new List<Arquitetura>();
+    private string V = "Bemservicos";
+
+
+    private void AdicionarObejto()
+    {
+        arquiteturaList.Add(arquitetura);
+        arquitetura = new Arquitetura();
+
+        // Redirecione para a página específica da empresa após adicionar
+        switch (arquitetura.Empresa)
+        {
+            case "Bem Serviços":
+                Navigation.NavigateTo("Pagina_Empresas/Bemservicos");
+                break;
+                // Repita para outras empresas...
+        }
+    }
+
+    public void Apagar(Arquitetura item)
+    {
+        arquiteturaList.Remove(item);
+    }
+    private void NavegarParaBemServicos()
+    {
+        Navigation.NavigateTo("Pagina_Empresas/Bemservicos");
+    }
+       
+
+  
+
+
+}
