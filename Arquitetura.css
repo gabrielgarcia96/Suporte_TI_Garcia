@@ -1,0 +1,131 @@
+﻿
+body {
+    background: #C7C7C7;
+    background: linear-gradient(135deg, #C7C7C7, #853301);
+}
+h1 {
+ display: flex;
+ text-align: center;
+ justify-content: center;
+}
+form {
+
+    max-width: 600px;
+    margin: 0 auto;
+   
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    font-weight: 100;
+    overflow: hidden;
+    box-shadow: 0 0 20px #0000001a;
+}
+
+th, td {
+    background-color: #ffffff33;
+    padding: 15px;
+    color: #000000;
+}
+
+th {
+    text-align: left;
+    
+}
+thead th{
+    background-color: #ffff;
+}
+
+.btn-edit {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+tbody tr:hover{
+    background-color: #ffffff4d;
+
+}
+tbody td{
+    position: relative;
+}
+tbody td:hover:before{
+    content: "";
+    position: absolute;
+    background-color: #ffffff33;
+    left: 0;
+    right: 0;
+    top: -9999px;
+    bottom: -9999px;
+    z-index: -1;
+}
+
+[data-tooltip] {
+    position: relative;
+    font-weight: bold;
+}
+
+    [data-tooltip]:after {
+        display: none;
+        position: absolute;
+        top: -5px;
+        padding: 5px;
+        border-radius: 3px;
+        left: calc(100% + 2px);
+        content: attr(data-tooltip);
+        white-space: nowrap;
+        background-color: #0095ff;
+        color: White;
+    }
+
+    [data-tooltip]:hover:after {
+        display: block;
+    }
+
+.botao-margin {
+    padding: 8px;
+    margin-top: 100px;
+    border-radius: 4px;
+    margin-right: 27px;
+}
+#btnbem:hover {
+    background: #BC1448;
+    background: linear-gradient(135deg, #BC1448, #838264);
+}
+
+#btnemp:hover {
+    background: #0A0166;
+    background: linear-gradient(135deg, #0A0166, #710184);
+}
+#btnsou:hover {
+    background: rgba(228, 192, 101, 1.0);
+    background: linear-gradient(135deg, rgba(228, 192, 101, 1.0), rgba(255, 242, 207, 1.0));
+}
+#btnrm:hover {
+    background: rgba(56, 56, 56, 1.0);
+    background: linear-gradient(135deg, rgba(56, 56, 56, 1.0), rgba(251, 202, 151, 1.0));
+}

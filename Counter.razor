@@ -1,0 +1,105 @@
+﻿@page "/arquitetura"
+
+@using Microsoft.AspNetCore.Components.Routing
+@using Suporte_TI_Garcia.Shared
+@using Suporte_TI_Garcia.Shared.Models
+@inject NavigationManager Navigation
+@inject Suporte_TI_Garcia.Shared.ArquiteturaService arquiteturaService
+
+<PageTitle>Arquitetura</PageTitle>
+
+<link rel="stylesheet" href="/Arquitetura.css" />
+<img src="img/bem_servios.png" />
+
+<h1>Organização de Setores</h1>
+
+<form @onsubmit="AdicionarObejto">
+    <label>Empresa: </label>
+    <select @bind="arquitetura.Empresa" name="empresa">
+        <option>...</option>
+        <option>Bem Serviços</option>
+        <option>Emprestae</option>
+        <option>Sou Assessoria</option>
+        <option>Rafael Menezes</option>
+    </select>
+    <label>Nome equipe:</label>
+    <select @bind="arquitetura.Equipe" name="equipe">
+        <option>...</option>
+        <option>Elite-Credito</option>
+        <option>Apobem-Seguro</option>
+        <option>Sabemi-Seguro</option>
+        <option>Mbm-Seguro</option>
+        <option>Ouvidoria e Cobrança</option>
+        <option>Auditoria</option>
+    </select>
+    <label>Maquina:</label>
+    <input @bind="arquitetura.NomeMaquina" placeholder="Digite o nome da maquina" />
+    <label>Posição de Atendimento:</label>
+    <input @bind="arquitetura.PosicaoPa" placeholder="Digite o número da Ponto de acesso(PA)" />
+
+    <button type="submit" class="btn btn-success">Adicionar</button>
+    <br />
+
+    
+    <button @onclick="NavegarParaBemServicos" id="btnbem" class=" btn btn-dark botao-margin">Bem Serviços</button>
+    <button @onclick="NavegarParaEmprestae" id="btnemp" class="btn btn-dark botao-margin">Emprestae</button>
+    <button @onclick="NavegarParaSouacessoria" id="btnsou" class="btn btn-dark botao-margin">Sou Assessoria</button>
+    <button @onclick="NavegarParaRafaelmenezes" id="btnrm" class="btn btn-dark botao-margin">Rafael Menezes</button>
+   
+</form>
+
+@code {
+    Arquitetura arquitetura = new();
+    List<Arquitetura> arquiteturaList = new List<Arquitetura>();
+
+    private void AdicionarObejto()
+    {
+        arquiteturaService.ArquiteturaList.Add(arquitetura);
+        arquitetura = new Arquitetura();
+
+
+        switch (arquitetura.Empresa)
+        {
+            case "Bem Serviços":
+                Navigation.NavigateTo("Bemservicos");
+                break;
+            case "Emprestae":
+                Navigation.NavigateTo("Emprestae");
+                break;
+            case "Sou assessoria":
+                Navigation.NavigateTo("Souacessoria");
+                break;
+            case "Rafael Menezes":
+                Navigation.NavigateTo("Rafaelmenezes");
+                break;
+
+
+        }
+    }
+
+    public void Apagar(Arquitetura item)
+    {
+        arquiteturaList.Remove(item);
+    }
+    private void NavegarParaBemServicos()
+    {
+        Navigation.NavigateTo("Bemservicos");
+    }
+    private void NavegarParaEmprestae()
+    {
+        Navigation.NavigateTo("Emprestae");
+    }
+    private void NavegarParaSouacessoria()
+    {
+        Navigation.NavigateTo("Souassessoria");
+    }
+    private void NavegarParaRafaelmenezes()
+    {
+        Navigation.NavigateTo("RafaelMenezes");
+    }
+       
+
+  
+
+
+}

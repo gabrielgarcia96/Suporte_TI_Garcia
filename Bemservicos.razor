@@ -1,0 +1,40 @@
+﻿@page "/Bemservicos"
+@using Suporte_TI_Garcia.Shared.Models
+@using Suporte_TI_Garcia.Shared
+@inject ArquiteturaService arquiteturaService
+
+
+<link rel="stylesheet" href="/Arquitetura.css" />
+
+
+<h3>Detalhes da Empresa Bem Serviços</h3>
+
+<!-- Adicione a tabela específica para a empresa Bem Serviços -->
+<table>
+    <thead>
+        <tr>
+            <th>Empresa</th>
+            <th>Nome Equipe</th>
+            <th>Nome Maquina</th>
+            <th>Ponto de Acesso</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var objeto in arquiteturaList.Where(o => o.Empresa == "Bem Serviços"))
+        {
+            <tr>
+                <td>@objeto.Empresa</td>
+                <td>@objeto.Equipe</td>
+                <td>@objeto.NomeMaquina</td>
+                <td>@objeto.PosicaoPa</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code{
+    Arquitetura arquitetura = new();
+    List<Arquitetura> arquiteturaList => arquiteturaService.ArquiteturaList;
+}
